@@ -1,0 +1,62 @@
+//rfn3302.h
+#define __RFN3302 1
+#if (__RFN3302==1)
+#define IO0_PIN_NUMBER			25//IOINPUT
+#define IO1_PIN_NUMBER			28//I2C_INT
+#define IO2_PIN_NUMBER			29//I2C_SDA
+#define IO3_PIN_NUMBER			30//I2C_SCL
+#define IO4_PIN_NUMBER			0//RELAY
+#define IO5_PIN_NUMBER			1//BEEP
+#define IO6_PIN_NUMBER			2//HW_TX
+#define IO7_PIN_NUMBER			3//HW_RX
+#define IO8_PIN_NUMBER			4//ETH_PWR
+#define IO9_PIN_NUMBER			5//LED_BG
+#define IO10_PIN_NUMBER			6//ES/RST
+#define IO11_PIN_NUMBER			8//SW_RX
+#define IO12_PIN_NUMBER			9//SW_TX
+#define IO13_PIN_NUMBER			10//BD_PWR
+#define IO14_PIN_NUMBER			11//LED_TAIL_R或OLED_CS2
+#define IO15_PIN_NUMBER			12//----OLED_FSO
+#define IO16_PIN_NUMBER			13//----OLED_CS1
+#define IO17_PIN_NUMBER			14//----OLED_DC
+#define IO18_PIN_NUMBER			15//SPI_CLK
+#define IO19_PIN_NUMBER			16//SPI_MOSI
+#define IO20_PIN_NUMBER			17//SPI_CS
+#define IO21_PIN_NUMBER			18//SPI_MISO
+#define LED_PIN_NUMBER			7	
+#define V1_PIN_NUMBER				24
+#define V2_PIN_NUMBER				23
+#define V3_PIN_NUMBER				22
+#define V4_PIN_NUMBER				21
+#define LNA_EN_PIN_NUMBER		20
+#define LNA_SPDT_PIN_NUMBER	19	//1-Tx 0-Rx
+#endif
+/**
+停车场主板
+*/
+#define BOARD_PACKING 1
+#if (BOARD_PACKING == 1)
+
+#define IO_INUT							IO0_PIN_NUMBER//光耦开关输入
+
+#define	TWI_MASTER_CONFIG_INT_PIN_NUMBER		IO1_PIN_NUMBER
+#define TWI_MASTER_CONFIG_DATA_PIN_NUMBER 	IO2_PIN_NUMBER
+#define TWI_MASTER_CONFIG_CLOCK_PIN_NUMBER 	IO3_PIN_NUMBER
+
+#define RELAY								IO4_PIN_NUMBER//继电器开关
+#define BEEP								IO5_PIN_NUMBER
+
+#define TX_PIN_NUMBER				IO6_PIN_NUMBER
+#define RX_PIN_NUMBER				IO7_PIN_NUMBER
+#define hwfc	false
+
+#define ETH_PWR							IO8_PIN_NUMBER
+#define LED_BG							IO9_PIN_NUMBER
+#define ETH_RST							IO10_PIN_NUMBER
+#define RX_IO								IO11_PIN_NUMBER//北斗模拟输入
+#define TX_IO								IO12_PIN_NUMBER
+#define BD_PWR							IO13_PIN_NUMBER//北斗电源
+#define LED_TAIL_R					IO14_PIN_NUMBER
+#define LED									LED_PIN_NUMBER
+#endif
+////FILE END
